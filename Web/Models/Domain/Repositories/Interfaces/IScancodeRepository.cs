@@ -10,7 +10,7 @@ namespace Web.Models.Domain.Repositories.Interfaces
 {
     public interface IScancodeRepository : IRepository<Scancode>
     {
-        IEnumerable<Scancode> GetUsCodes();
+        IEnumerable<Scancode> GetUSCodes();
         IEnumerable<Scancode> GetGermanCodes();
         IEnumerable<Scancode> GetFrenchCodes();
     }
