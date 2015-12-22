@@ -218,7 +218,6 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Constants\Enums.cs" />
-    <Compile Include="Models\Domain\Config\CallbackConfig.cs" />
     <Compile Include="Models\Domain\Context\ResourcesContext.cs" />
     <Compile Include="Models\Domain\Entities\Callback.cs" />
     <Compile Include="Models\Domain\Entities\Category.cs" />
