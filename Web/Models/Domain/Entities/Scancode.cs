@@ -14,16 +14,16 @@ namespace Web.Models.Domain.Entities
         [StringLength(2147483647)]
         public string Code { get; set; }
 
-        [Required]
-        [StringLength(2147483647)]
-        public string US { get; set; }
+        public long USId { get; set; }
 
-        [Required]
-        [StringLength(2147483647)]
-        public string German { get; set; }
+        public long GermanId { get; set; }
 
-        [Required]
-        [StringLength(2147483647)]
-        public string French { get; set; }
+        public long FrenchId { get; set; }
+
+        public virtual FrenchKey FrenchKey { get; set; }
+
+        public virtual GermanKey GermanKey { get; set; }
+
+        public virtual USKey USKey { get; set; }
     }
 }

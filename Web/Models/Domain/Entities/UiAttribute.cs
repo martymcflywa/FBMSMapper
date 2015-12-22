@@ -6,7 +6,7 @@ namespace Web.Models.Domain.Entities
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class UiAttribute
+    public partial class UIAttribute
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long UiAttributeId { get; set; }
