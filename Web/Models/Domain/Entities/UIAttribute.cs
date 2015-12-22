@@ -9,7 +9,7 @@ namespace Web.Models.Domain.Entities
     public partial class UIAttribute
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public long UiAttributeId { get; set; }
+        public long UIAttributeId { get; set; }
 
         [Required]
         [StringLength(2147483647)]
