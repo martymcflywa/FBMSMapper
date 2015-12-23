@@ -213,27 +213,28 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DataAccess\Domain\Context\ResourcesContext.cs" />
+    <Compile Include="DataAccess\Domain\Entities\Callback.cs" />
+    <Compile Include="DataAccess\Domain\Entities\Category.cs" />
+    <Compile Include="DataAccess\Domain\Entities\FrenchKey.cs" />
+    <Compile Include="DataAccess\Domain\Entities\GermanKey.cs" />
+    <Compile Include="DataAccess\Domain\Entities\Modifier.cs" />
+    <Compile Include="DataAccess\Domain\Entities\Scancode.cs" />
+    <Compile Include="DataAccess\Domain\Entities\Section.cs" />
+    <Compile Include="DataAccess\Domain\Entities\Sound.cs" />
+    <Compile Include="DataAccess\Domain\Entities\UIAttribute.cs" />
+    <Compile Include="DataAccess\Domain\Entities\USKey.cs" />
+    <Compile Include="DataAccess\Repositories\CallbackRepository.cs" />
+    <Compile Include="DataAccess\Repositories\Interfaces\Base\IRepository.cs" />
+    <Compile Include="DataAccess\Repositories\Interfaces\ICallbackRepository.cs" />
+    <Compile Include="DataAccess\Repositories\Interfaces\IScancodeRepository.cs" />
+    <Compile Include="DataAccess\Repositories\Repository.cs" />
+    <Compile Include="DataAccess\Repositories\ScancodeRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Constants\Enums.cs" />
-    <Compile Include="Models\Domain\Context\ResourcesContext.cs" />
-    <Compile Include="Models\Domain\Entities\Callback.cs" />
-    <Compile Include="Models\Domain\Entities\Category.cs" />
-    <Compile Include="Models\Domain\Entities\FrenchKey.cs" />
-    <Compile Include="Models\Domain\Entities\GermanKey.cs" />
-    <Compile Include="Models\Domain\Entities\Modifier.cs" />
-    <Compile Include="Models\Domain\Entities\Scancode.cs" />
-    <Compile Include="Models\Domain\Entities\Section.cs" />
-    <Compile Include="Models\Domain\Entities\Sound.cs" />
-    <Compile Include="Models\Domain\Entities\UIAttribute.cs" />
-    <Compile Include="Models\Domain\Entities\USKey.cs" />
-    <Compile Include="Models\Domain\Repositories\Implementations\CallbackRepository.cs" />
-    <Compile Include="Models\Domain\Repositories\Implementations\ScancodeRepository.cs" />
-    <Compile Include="Models\Domain\Repositories\Interfaces\ICallbackRepository.cs" />
-    <Compile Include="Models\Domain\Repositories\Interfaces\IScancodeRepository.cs" />
-    <Compile Include="Models\Domain\Repositories\Repository.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -312,12 +313,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{ccb513c3-7950-4d7f-be52-c03e21399cb1}</Project>
-      <Name>DataAccess</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
