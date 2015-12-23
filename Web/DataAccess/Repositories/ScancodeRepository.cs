@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using Web.Models.Domain.Context;
-using Web.Models.Domain.Entities;
-using Web.Models.Domain.Repositories.Interfaces;
+using Web.DataAccess.Domain.Context;
+using Web.DataAccess.Domain.Entities;
+using Web.DataAccess.Repositories.Interfaces;
 
-namespace Web.Models.Domain.Repositories.Implementations
+namespace Web.DataAccess.Repositories
 {
     public class ScancodeRepository : Repository<Scancode>, IScancodeRepository
     {

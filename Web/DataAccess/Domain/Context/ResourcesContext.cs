@@ -1,7 +1,7 @@
 using System.Data.Entity;
-using Web.Models.Domain.Entities;
+using Web.DataAccess.Domain.Entities;
 
-namespace Web.Models.Domain.Context
+namespace Web.DataAccess.Domain.Context
 {
     public partial class ResourcesContext : DbContext
     {

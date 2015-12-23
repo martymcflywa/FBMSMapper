@@ -1,11 +1,7 @@
-namespace Web.Models.Domain.Entities
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+using System.ComponentModel.DataAnnotations;
 
+namespace Web.DataAccess.Domain.Entities
+{
     public partial class Scancode
     {
         public long ScancodeId { get; set; }

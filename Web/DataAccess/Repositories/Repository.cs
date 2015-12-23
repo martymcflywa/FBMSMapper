@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Web;
-using DataAccess.Interfaces;
+using Web.DataAccess.Repositories.Interfaces;
+using Web.DataAccess.Repositories.Interfaces.Base;
 
-namespace Web.Models.Domain.Repositories
+namespace Web.DataAccess.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
