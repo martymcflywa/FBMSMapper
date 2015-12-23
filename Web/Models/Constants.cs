@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Web.Models.Constants
+namespace Web.Models
 {
-    public class Enums
+    public class Constants
     {
         public enum Categories
         {
@@ -26,5 +26,7 @@ namespace Web.Models.Constants
             German,
             French
         }
+
+
     }
 }
