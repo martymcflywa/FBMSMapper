@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Web.Models
 {
-    public class Constants
+    public static class Constants
     {
         public enum Categories
         {
@@ -27,6 +27,6 @@ namespace Web.Models
             French
         }
 
-
+        public const int Offset = 32;
     }
 }
