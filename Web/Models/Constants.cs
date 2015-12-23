@@ -28,5 +28,9 @@ namespace Web.Models
         }
 
         public const int Offset = 32;
+        public const int MaxButtons = 512;
+        public const int MaxDevices = 16;
+        public const int DefaultShiftMagnitude = 256;
+        public const int DefaultNumberOfDevices = 8;
     }
 }
