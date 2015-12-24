@@ -238,10 +238,14 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Constants.cs" />
+    <Compile Include="Models\Device\BaseAssignment.cs" />
     <Compile Include="Models\Device\Joystick.cs" />
-    <Compile Include="Models\Device\UserConfiguration.cs" />
+    <Compile Include="Models\Device\JoystickAssignment.cs" />
+    <Compile Include="Models\Device\Keyboard.cs" />
+    <Compile Include="Models\Device\KeyboardAssignment.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\UserConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

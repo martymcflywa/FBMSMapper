@@ -9,5 +9,6 @@ namespace Web.Models.Device
     {
         public string Callback { get; set; }
         public int SoundId { get; set; }
+        public string Description { get; set; }
     }
 }

@@ -33,8 +33,15 @@ namespace Web.Models
         public const int DefaultShiftMagnitude = 256;
         public const int DefaultNumberOfDevices = 8;
 
-        public const int NoSound = -1;
+        public const int NoSoundKey = -1;
+        public const int NoSoundDX = 0;
         public const int NotInUse = 0;
         public const int Visible = 1;
+
+        public const int TypeDX = -2;
+        public const int TypeHat = -3;
+
+        public const int EventPress = 0;
+        public const int EventRelease = 0x42;
     }
 }
