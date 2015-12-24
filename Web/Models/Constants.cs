@@ -32,5 +32,9 @@ namespace Web.Models
         public const int MaxDevices = 16;
         public const int DefaultShiftMagnitude = 256;
         public const int DefaultNumberOfDevices = 8;
+
+        public const int NoSound = -1;
+        public const int NotInUse = 0;
+        public const int Visible = 1;
     }
 }
