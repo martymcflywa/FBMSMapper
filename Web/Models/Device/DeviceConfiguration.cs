@@ -8,14 +8,11 @@ namespace Web.Models.Device
     public class DeviceConfiguration
     {
         protected bool IsDXShifting { get; }
-        protected int CountryId { get; set; } = (int) Constants.Countries.US;
-        protected int NumberOfDevices { get; set; } = Constants.DefaultNumberOfDevices;
-        protected int ShiftMagnitude { get; set; } = Constants.DefaultShiftMagnitude;
+        protected int CountryId { get; set; }
+        protected int NumberOfDevices { get; set; }
+        protected int ShiftMagnitude { get; set; }
 
-        protected int ShiftDevices
-        {
-            get { return Constants.MaxDevices - NumberOfDevices; }
-        }
+        protected int ShiftDevices => Constants.MaxDevices - NumberOfDevices;
 
         public DeviceConfiguration(bool isDXShifting, int? countryId, int? numberOfDevices, int? shiftMagnitude)
         {
