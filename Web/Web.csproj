@@ -213,6 +213,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Mapping\IMapper.cs" />
     <Compile Include="DataAccess\Domain\Context\ResourcesContext.cs" />
     <Compile Include="DataAccess\Domain\Entities\Callback.cs" />
     <Compile Include="DataAccess\Domain\Entities\Category.cs" />
@@ -238,7 +239,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Constants.cs" />
     <Compile Include="Models\Device\Joystick.cs" />
-    <Compile Include="Models\Device\DeviceConfiguration.cs" />
+    <Compile Include="Models\Device\UserConfiguration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

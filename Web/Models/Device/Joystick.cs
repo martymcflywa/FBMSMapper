@@ -7,15 +7,15 @@ namespace Web.Models.Device
 {
     public class Joystick
     {
-        private readonly DeviceConfiguration _deviceConfiguration;
+        private readonly UserConfiguration _userConfiguration;
 
         public int JoystickId { get; set; }
         public int NumberOfButtons { get; set; }
         public int Offset => JoystickId * Constants.Offset;
 
-        public Joystick(DeviceConfiguration deviceConfiguration, int joystickId, int numberOfButtons)
+        public Joystick(UserConfiguration userConfiguration, int joystickId, int numberOfButtons)
         {
-            _deviceConfiguration = deviceConfiguration;
+            _userConfiguration = userConfiguration;
             JoystickId = joystickId;
             NumberOfButtons = numberOfButtons;
         }

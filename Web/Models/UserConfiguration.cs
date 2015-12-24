@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace Web.Models.Device
+namespace Web.Models
 {
-    public class DeviceConfiguration
+    public class UserConfiguration
     {
         protected bool IsDXShifting { get; }
         protected int CountryId { get; set; }
@@ -14,7 +9,7 @@ namespace Web.Models.Device
 
         protected int ShiftDevices => Constants.MaxDevices - NumberOfDevices;
 
-        public DeviceConfiguration(bool isDXShifting, int? countryId, int? numberOfDevices, int? shiftMagnitude)
+        public UserConfiguration(bool isDXShifting, int? countryId, int? numberOfDevices, int? shiftMagnitude)
         {
             IsDXShifting = isDXShifting;
 
