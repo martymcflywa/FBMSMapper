@@ -7,7 +7,7 @@ namespace Web.Models.Device
 {
     public class Joystick
     {
-        private readonly UserConfiguration _userConfiguration;
+        public readonly UserConfiguration UserConfiguration;
 
         public int JoystickId { get; set; }
         public int NumberOfButtons { get; set; }
@@ -15,7 +15,7 @@ namespace Web.Models.Device
 
         public Joystick(UserConfiguration userConfiguration, int joystickId, int numberOfButtons)
         {
-            _userConfiguration = userConfiguration;
+            UserConfiguration = userConfiguration;
             JoystickId = joystickId;
             NumberOfButtons = numberOfButtons;
         }
