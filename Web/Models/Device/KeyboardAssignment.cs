@@ -15,20 +15,18 @@ namespace Web.Models.Device
         public int ComboModifierId { get; set; }
         public int UIAttributeId { get; set; }
 
-        public KeyboardAssignment(string callback, int? soundId, string keyScancode, int keyModifierId,
-            string comboScancode, int? comboModifierId, int? uiAttributeId, string description)
+        public KeyboardAssignment(string callback, int soundId, string keyScancode, int keyModifierId,
+            string comboScancode, int comboModifierId, int uiAttributeId, string description)
         {
             Callback = callback;
 
             KeyScancode = keyScancode;
             KeyModifierId = keyModifierId;
 
-            // use default values if null
-            SoundId = soundId ?? Constants.NoSoundKey;
+            SoundId = soundId;
             ComboScancode = comboScancode;
-            ComboModifierId = comboModifierId ?? Constants.NotInUse;
-            UIAttributeId = uiAttributeId ?? Constants.Visible;
-
+            ComboModifierId = comboModifierId;
+            UIAttributeId = uiAttributeId;
             Description = description;
         }
 

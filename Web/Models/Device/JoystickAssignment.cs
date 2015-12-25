@@ -16,13 +16,13 @@ namespace Web.Models.Device
         public const string NotUsed = "0x0";
 
         public JoystickAssignment(string callback, int buttonNumber, int invocationId, bool isHat, bool isPress,
-            int? soundId, string description)
+            int soundId, string description)
         {
             Callback = callback;
 
             if (buttonNumber < 1)
             {
-                throw new IndexOutOfRangeException();
+                throw new ArgumentOutOfRangeException();
             }
             else
             {
@@ -34,7 +34,7 @@ namespace Web.Models.Device
             ControlTypeId = isHat ? Constants.TypeHat : Constants.TypeDX;
             EventTypeId = isPress ? Constants.EventPress : Constants.EventRelease;
 
-            SoundId = soundId ?? Constants.NoSoundDX;
+            SoundId = soundId;
 
             Description = description;
         }
