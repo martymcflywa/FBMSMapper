@@ -15,6 +15,22 @@ namespace Web.DataAccess.Repositories
 
         public ResourcesContext ResourcesContext => Context as ResourcesContext;
 
+        public IEnumerable<Callback> GetById(int id)
+        {
+            return ResourcesContext.Callbacks
+                .Include(c => c.Category)
+                .Include(c => c.Section)
+                .Where(c => c.CallbackId == id);
+        }
+
+        public IEnumerable<Callback> GetByCommand(string command)
+        {
+            return ResourcesContext.Callbacks
+                .Include(c => c.Category)
+                .Include(c => c.Section)
+                .Where(c => c.Command == command);
+        }
+
         public IEnumerable<Callback> GetByCategory(int id)
         {
             return ResourcesContext.Callbacks
