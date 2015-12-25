@@ -30,5 +30,14 @@ namespace Web.DataAccess.Repositories
                 .Include(c => c.Section)
                 .Where(c => c.SectionId == id);
         }
+
+        public IEnumerable<Callback> GetByCategoryAndSection(int categoryId, int sectionId)
+        {
+            return ResourcesContext.Callbacks
+                .Include(c => c.Category)
+                .Include(c => c.Section)
+                .Where(c => c.CategoryId == categoryId &&
+                            c.SectionId == sectionId);
+        }
     }
 }

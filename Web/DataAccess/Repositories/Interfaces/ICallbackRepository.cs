@@ -8,5 +8,6 @@ namespace Web.DataAccess.Repositories.Interfaces
     {
         IEnumerable<Callback> GetByCategory(int id);
         IEnumerable<Callback> GetBySection(int id);
+        IEnumerable<Callback> GetByCategoryAndSection(int categoryId, int sectionId);
     }
 }
