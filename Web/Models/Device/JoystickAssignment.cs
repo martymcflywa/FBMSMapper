@@ -24,10 +24,8 @@ namespace Web.Models.Device
             {
                 throw new ArgumentOutOfRangeException();
             }
-            else
-            {
-                ButtonId = buttonNumber - 1;
-            }
+
+            ButtonId = buttonNumber - 1;
 
             InvocationId = invocationId;
 
