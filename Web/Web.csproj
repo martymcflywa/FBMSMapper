@@ -215,6 +215,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Mapping\IKeyboardMapper.cs" />
     <Compile Include="Controllers\Mapping\IMapper.cs" />
+    <Compile Include="Controllers\Mapping\KeyboardMapper.cs" />
     <Compile Include="DataAccess\Domain\Context\ResourcesContext.cs" />
     <Compile Include="DataAccess\Domain\Entities\Callback.cs" />
     <Compile Include="DataAccess\Domain\Entities\Category.cs" />
