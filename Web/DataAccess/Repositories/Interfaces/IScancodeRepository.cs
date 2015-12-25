@@ -6,8 +6,8 @@ namespace Web.DataAccess.Repositories.Interfaces
 {
     public interface IScancodeRepository : IRepository<Scancode>
     {
-        IEnumerable<Scancode> GetUSCodes();
-        IEnumerable<Scancode> GetGermanCodes();
-        IEnumerable<Scancode> GetFrenchCodes();
+        IEnumerable<Scancode> GetAllByCountry(int countryId);
+        IEnumerable<Scancode> GetByCountryAndId(int countryId, int scancodeId);
+        IEnumerable<Scancode> GetByCountryAndScancode(int countryId, string code);
     }
 }

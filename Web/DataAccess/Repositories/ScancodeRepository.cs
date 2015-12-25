@@ -1,8 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
+using Microsoft.Ajax.Utilities;
 using Web.DataAccess.Domain.Context;
 using Web.DataAccess.Domain.Entities;
 using Web.DataAccess.Repositories.Interfaces;
+using Web.Models;
 
 namespace Web.DataAccess.Repositories
 {
@@ -14,22 +18,64 @@ namespace Web.DataAccess.Repositories
 
         public ResourcesContext ResourcesContext => Context as ResourcesContext;
 
-        public IEnumerable<Scancode> GetUSCodes()
+        public IEnumerable<Scancode> GetAllByCountry(int countryId)
         {
-            return ResourcesContext.Scancodes
-                .Include(c => c.USKey);
+            switch (countryId)
+            {
+                case (int)Constants.Countries.US:
+                    return ResourcesContext.Scancodes
+                        .Include(c => c.USKey);
+                case (int)Constants.Countries.German:
+                    return ResourcesContext.Scancodes
+                        .Include(c => c.GermanKey);
+                case (int)Constants.Countries.French:
+                    return ResourcesContext.Scancodes
+                        .Include(c => c.FrenchKey);
+                default:
+                    throw new ArgumentException("Invalid countryId");
+            }
         }
 
-        public IEnumerable<Scancode> GetGermanCodes()
+        public IEnumerable<Scancode> GetByCountryAndId(int countryId, int scancodeId)
         {
-            return ResourcesContext.Scancodes
-                .Include(c => c.GermanKey);
+            switch (countryId)
+            {
+                case (int)Constants.Countries.US:
+                    return ResourcesContext.Scancodes
+                        .Include(c => c.USKey)
+                        .Where(c => c.ScancodeId == scancodeId);
+                case (int)Constants.Countries.German:
+                    return ResourcesContext.Scancodes
+                        .Include(c => c.GermanKey)
+                        .Where(c => c.ScancodeId == scancodeId);
+                case (int)Constants.Countries.French:
+                    return ResourcesContext.Scancodes
+                        .Include(c => c.FrenchKey)
+                        .Where(c => c.ScancodeId == scancodeId);
+                default:
+                    throw new ArgumentException("Invalid countryId");
+            }
         }
 
-        public IEnumerable<Scancode> GetFrenchCodes()
+        public IEnumerable<Scancode> GetByCountryAndScancode(int countryId, string code)
         {
-            return ResourcesContext.Scancodes
-                .Include(c => c.FrenchKey);
-        }
+            switch (countryId)
+            {
+                case (int)Constants.Countries.US:
+                    return ResourcesContext.Scancodes
+                        .Include(c => c.USKey)
+                        .Where(c => c.Code == code);
+                case (int)Constants.Countries.German:
+                    return ResourcesContext.Scancodes
+                        .Include(c => c.GermanKey)
+                        .Where(c => c.Code == code);
+                case (int)Constants.Countries.French:
+                    return ResourcesContext.Scancodes
+                        .Include(c => c.FrenchKey)
+                        .Where(c => c.Code == code);
+                default:
+                    throw new ArgumentException("Invalid countryId");
+            }
+        } 
     }
 }
