@@ -11,6 +11,5 @@ namespace Web.Controllers.Mapping
     public interface IMapper
     {
         UnitOfWork UnitOfWork { get; set; }
-        void RemoveAssignment(string callback, string code);
     }
 }
