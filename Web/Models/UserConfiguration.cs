@@ -17,7 +17,8 @@ namespace Web.Models
             if(countryId == null)
             {
                 CountryId = (int)Constants.Countries.US;
-            } else
+            }
+            else
             {
                 CountryId = (int)countryId;
             }
@@ -25,7 +26,8 @@ namespace Web.Models
             if (numberOfDevices == null)
             {
                 NumberOfDevices = Constants.DefaultNumberOfDevices;
-            } else
+            }
+            else
             {
                 NumberOfDevices = (int)numberOfDevices;
             }
@@ -33,7 +35,8 @@ namespace Web.Models
             if(shiftMagnitude == null)
             {
                 ShiftMagnitude = Constants.DefaultShiftMagnitude;
-            } else
+            }
+            else
             {
                 ShiftMagnitude = (int)shiftMagnitude;
             }
