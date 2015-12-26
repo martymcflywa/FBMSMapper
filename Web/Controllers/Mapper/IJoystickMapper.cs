@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using Web.Models.Device;
 
-namespace Web.Controllers.Mapping
+namespace Web.Controllers.Mapper
 {
     public interface IJoystickMapper : IMapper
     {
