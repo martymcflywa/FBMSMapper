@@ -3,7 +3,7 @@ using Web.Models.Device;
 
 namespace Web.Controllers.Mapper
 {
-    public interface IKeyboardMapper : IMapper
+    public interface IKeyboardMapper
     {
         List<KeyboardAssignment> Assignments { get; set; }
 

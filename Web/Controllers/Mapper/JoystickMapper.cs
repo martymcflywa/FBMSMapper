@@ -8,13 +8,7 @@ namespace Web.Controllers.Mapper
 {
     public class JoystickMapper : IJoystickMapper
     {
-        public UnitOfWork UnitOfWork { get; set; }
         public List<JoystickAssignment> Assignments { get; set; }
-
-        public JoystickMapper(UnitOfWork unitOfWork)
-        {
-            UnitOfWork = unitOfWork;
-        }
 
         public void AddAssignment(string callback, int buttonNumber, int invocationId, bool isHat, bool isPress, int soundId,
             string description)

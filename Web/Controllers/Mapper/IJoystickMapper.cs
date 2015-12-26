@@ -3,7 +3,7 @@ using Web.Models.Device;
 
 namespace Web.Controllers.Mapper
 {
-    public interface IJoystickMapper : IMapper
+    public interface IJoystickMapper
     {
         List<JoystickAssignment> Assignments { get; set; }
 

@@ -7,13 +7,7 @@ namespace Web.Controllers.Mapper
 {
     public class KeyboardMapper : IKeyboardMapper
     {
-        public UnitOfWork UnitOfWork { get; set; }
         public List<KeyboardAssignment> Assignments { get; set; }
-
-        public KeyboardMapper(UnitOfWork unitOfWork)
-        {
-            UnitOfWork = unitOfWork;
-        }
 
         public void AddAssignment(string callback, int soundId, string keyScancode, int keyModifierId, string comboScancode,
             int comboModifierId, int uiAttributeId, string description)
